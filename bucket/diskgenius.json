@@ -1,0 +1,32 @@
+{
+    "version": "5.5.1.1508",
+    "description": "An all-in-one tool for data recovery,partition management, data backup, and disk utilities.",
+    "homepage": "https://diskgenius.cn",
+    "license": "Shareware",
+    "architecture": {
+        "64bit": {
+            "url": "https://download2.geniusite.com/DG5511508_x64.zip",
+            "hash": "8c306aa776d8d13dcb264bcc304c5956bd199851387b282414b769b90bd456f1"
+        }
+    },
+    "extract_dir": "DiskGenius",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\Options.ini\")) { New-Item \"$dir\\Options.ini\" | Out-Null }",
+    "shortcuts": [
+        [
+            "DiskGenius.exe",
+            "DiskGenius"
+        ]
+    ],
+    "persist": "Options.ini",
+    "checkver": {
+        "url": "https://www.diskgenius.com/download.php",
+        "regex": "Version: ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download2.geniusite.com/DG$cleanVersion_x64.zip"
+            }
+        }
+    }
+}
