@@ -10,6 +10,12 @@
         }
     },
     "bin": "yarr.exe",
+    "shortcuts": [
+        [
+            "yarr.exe",
+            "yarr"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/nkanaev/yarr/releases/download/v$version/yarr-v$version-windows64.zip"
