@@ -1,0 +1,34 @@
+{
+    "version": "3.5.8",
+    "description": "A Minecraft Launcher which is multi-functional, cross-platform and popular.",
+    "homepage": "https://github.com/HMCL-dev/HMCL",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.exe#/HMCL.exe",
+    "hash": "2fd35ed72f3edb04bee9677fd08d0c709a1ce9ff0d46f2e7a6515244d258a69c",
+    "pre_install": [
+        "if(!(Test-Path \"$persist_dir\\hmcl.json\")) {",
+        "    New-Item \"$dir\\hmcl.json\" -ItemType File | Out-Null",
+        "}"
+    ],
+    "shortcuts": [
+        [
+            "HMCL.exe",
+            "HMCL"
+        ]
+    ],
+    "persist": [
+        "hmcl.json",
+        ".minecraft"
+    ],
+    "checkver": {
+        "url": "https://github.com/HMCL-dev/HMCL/releases/latest",
+        "regex": "/releases/tag/release-([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/HMCL-dev/HMCL/releases/download/release-$version/HMCL-$version.exe#/HMCL.exe",
+        "hash": {
+            "url": "https://github.com/HMCL-dev/HMCL/releases/tag/release-$version",
+            "regex": "(?s)$basename.*?$sha256"
+        }
+    }
+}
