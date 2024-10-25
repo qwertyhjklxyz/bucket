@@ -1,12 +1,12 @@
 {
-    "version": "9.1.0794",
+    "version": "9.1.0814",
     "description": "Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient.",
     "homepage": "https://www.vim.org",
     "license": "Vim",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/vim/vim-win32-installer/releases/download/v9.1.0794/gvim_9.1.0794_x64.zip",
-            "hash": "59cad6914130e7670b680937a687bc3c72b89e8dda5bc14e50f8796c446b710c",
+            "url": "https://github.com/vim/vim-win32-installer/releases/download/v9.1.0814/gvim_9.1.0814_x64.zip",
+            "hash": "ee112709afec4c7bfa76cdc42a97f223915a6f4c79be547c3550a4b2dbb99e9b",
             "extract_dir": "vim/vim91"
         }
     },
